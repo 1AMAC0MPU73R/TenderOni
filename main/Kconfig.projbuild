@@ -1,0 +1,33 @@
+menu "Wifi Configuration"
+
+    config ESP_WIFI_SSID
+        string "SSID"
+        default "myssid"
+        help
+            SSID (network name) for the example to connect to.
+
+    config ESP_WIFI_PASSWORD
+        string "Password"
+        default "mypassword"
+        help
+            WiFi password (WPA or WPA2) for the example to use.
+
+    config ESP_WIFI_APMAC
+        string "AP MAC Address"
+        default "00-00-00-00-00-00"
+        help
+            Set the mac adress to the nearest AP where sensor is to be used, default is no MAC set.
+
+    config ESP_WIFI_CHANNEL
+        int "AP Channel"
+        default "0"
+        help
+            Set the expected Wifi channel (0~13), or 0 for default
+
+    config ESP_MAXIMUM_RETRY
+        int "Maximum retry"
+        default 5
+        help
+            Set the Maximum retry to avoid station reconnecting to the AP unlimited when the AP is really inexistent.
+
+endmenu
